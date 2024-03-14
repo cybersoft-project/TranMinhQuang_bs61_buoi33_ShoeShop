@@ -186,14 +186,18 @@ const Ex_ShoeShop = () => {
         let index = arrCart.findIndex((item) => {
             return item.id == shoeID
         });
-        console.log(index);
         if (index != -1) {
             let newArrCart = [... arrCart]
 
             let value = type == "plus" ? 1 : -1;
+            if (value==-1 && newArrCart[index].total==1) {
+                deleteShoeCart(newArrCart[index].id);
+            }
+            else{
+                newArrCart[index].total += value;
+                setArrCart(newArrCart);
+            }
 
-            newArrCart[index].total += value;
-            setArrCart(newArrCart);
         }
     }
     function closeModal() {
