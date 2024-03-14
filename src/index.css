@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.demoText{
+    @apply bg-blue-800;
+}
