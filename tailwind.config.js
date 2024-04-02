@@ -8,6 +8,9 @@ export default {
     extend: {
       color: {
         'my-bg': '#12181b'
+      },
+      container:{
+        center: true,
       }
     },
   },

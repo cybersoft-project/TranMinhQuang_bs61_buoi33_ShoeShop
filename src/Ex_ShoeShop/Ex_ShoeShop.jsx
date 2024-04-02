@@ -2,8 +2,12 @@ import React, { useState, Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import ListShoe from "./ListShoe";
 import CardModal from "./CardModal";
+import { useParams } from "react-router-dom";
 
 const Ex_ShoeShop = () => {
+    const {id} = useParams();
+    console.log('param', id);
+    
     let [isOpen, setIsOpen] = useState(false);
     const arrShoe = [
         {

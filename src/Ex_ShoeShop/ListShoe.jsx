@@ -1,6 +1,8 @@
 import React from 'react'
 import ShoeItem from './ShoeItem'
 const ListShoe = ({listShoe, addShoeCart, openModal}) => {
+  console.log('listShoe', listShoe);
+  
   return (
     <div  className="list_shoe grid grid-cols-3 gap-5" >
     {
